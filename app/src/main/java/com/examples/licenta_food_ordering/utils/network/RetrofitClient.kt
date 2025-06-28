@@ -11,7 +11,7 @@ class RetrofitClient {
     companion object {
         private val retrofit by lazy {
             Retrofit.Builder()
-                .baseUrl("https://a670-188-27-179-131.ngrok-free.app") // TODO: change all the time
+                .baseUrl("https://383b-84-232-135-100.ngrok-free.app") // TODO: change all the time
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(
                     OkHttpClient.Builder().addInterceptor(LoggingInterceptor()).build()
