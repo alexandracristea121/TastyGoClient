@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- pt a folosi google maps si acces la locatie -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Licenta_Food_Ordering"
+        tools:targetApi="31">
+
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.RestaurantMapActivity"
+            android:label=""
+            android:exported="true" />
+
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.OrderDetailsActivity"
+            android:label=""
+            android:exported="true" />
+
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.RecentOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.LocationSelectionActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.RestaurantDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.examples.licenta_food_ordering.presentation.activity.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity android:name="com.examples.licenta_food_ordering.presentation.activity.ChatbotActivity"></activity>
+
+        <!-- Google Sign-In config -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAE0X_TQwcTjyjl6vIleHqSBosRJDLUmXw" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- CLIENT_ID pt Google Sign-In -->
+        <meta-data
+            android:name="com.google.android.gms.auth.api.signin.CLIENT_ID"
+            android:value="183309017281-4gv9asspvpre0knoeijaas5vucm86aoa.apps.googleusercontent.com" />
+
+        <!-- Fixing SignInHubActivity conflict -->
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="true"
+            tools:replace="android:exported">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="com.googleusercontent.apps.183309017281-3u6oaktuphq15mr1t1iaumh0fs4u1ra0"
+                    android:host="oauth2redirect" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

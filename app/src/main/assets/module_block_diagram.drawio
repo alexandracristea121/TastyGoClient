@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-03-19T12:00:00.000Z" agent="Mozilla/5.0" version="21.1.2" type="device">
+  <diagram id="tastygo-modules" name="TastyGo Module Block Diagram">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Main Container -->
+        <mxCell id="main" value="TastyGo Food Ordering App" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- Authentication Module -->
+        <mxCell id="auth-module" value="Authentication Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="40" y="40" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="auth-components" value="• LoginActivity&#xa;• SignUpActivity&#xa;• Firebase Auth&#xa;• Google Sign-In&#xa;• UserModel&#xa;• SharedPrefsHelper" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="auth-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Restaurant Module -->
+        <mxCell id="restaurant-module" value="Restaurant Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="380" y="40" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="restaurant-components" value="• RestaurantDetailsActivity&#xa;• HomeFragment&#xa;• FoodSearchFragment&#xa;• MenuItemsAdapter&#xa;• Restaurant Model&#xa;• MenuItem Model&#xa;• ApiService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="restaurant-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Order Module -->
+        <mxCell id="order-module" value="Order Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="720" y="40" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="order-components" value="• CartFragment&#xa;• PaymentActivity&#xa;• OrderHistoryFragment&#xa;• CartAdapter&#xa;• OrderDetails Model&#xa;• CartItem Model&#xa;• StripePaymentService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="order-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Delivery Module -->
+        <mxCell id="delivery-module" value="Delivery Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="40" y="240" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="delivery-components" value="• LocationSelectionActivity&#xa;• FirebaseCourierService&#xa;• CourierTrackingService&#xa;• RouteManager&#xa;• DistanceCalculationUtility&#xa;• DeliveryUtils" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="delivery-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Chat Module -->
+        <mxCell id="chat-module" value="Chat Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="380" y="240" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="chat-components" value="• ChatbotActivity&#xa;• ChatAdapter&#xa;• Message Model&#xa;• GeminiApiHelper&#xa;• Firebase Realtime DB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="chat-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Notification Module -->
+        <mxCell id="notification-module" value="Notification Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="720" y="240" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="notification-components" value="• NotificationsFragment&#xa;• NotificationsBottomSheet&#xa;• NotificationAdapter&#xa;• NotificationModel&#xa;• Firebase Cloud Messaging" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="notification-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Core Module -->
+        <mxCell id="core-module" value="Core Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="40" y="440" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="core-components" value="• MainActivity&#xa;• SplashScreenActivity&#xa;• LaunchActivity&#xa;• RetrofitClient&#xa;• ImageUtils&#xa;• SharedPrefsHelper" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="core-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Recommendation Module -->
+        <mxCell id="recommendation-module" value="Recommendation Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="380" y="440" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="recommendation-components" value="• PopularItemsAdapter&#xa;• SuggestedFoodAdapter&#xa;• BuyItemsAgainAdapter&#xa;• SuggestedFood Model&#xa;• Firebase Realtime DB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="recommendation-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Profile Module -->
+        <mxCell id="profile-module" value="Profile Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="720" y="440" width="300" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="profile-components" value="• ProfileFragment&#xa;• RecentOrdersActivity&#xa;• UserModel&#xa;• OrderDetails Model&#xa;• Firebase Auth&#xa;• SharedPrefsHelper" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="profile-module">
+          <mxGeometry y="30" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Module Relationships -->
+        <!-- Auth to Other Modules -->
+        <mxCell id="auth-rel1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="main" source="auth-module" target="restaurant-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="auth-rel2" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="main" source="auth-module" target="order-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Restaurant to Order -->
+        <mxCell id="rest-order-rel" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="main" source="restaurant-module" target="order-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Order to Delivery -->
+        <mxCell id="order-delivery-rel" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="main" source="order-module" target="delivery-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Delivery to Notification -->
+        <mxCell id="delivery-notif-rel" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="main" source="delivery-module" target="notification-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Core to All -->
+        <mxCell id="core-rel1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="main" source="core-module" target="auth-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="core-rel2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="main" source="core-module" target="restaurant-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="core-rel3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="main" source="core-module" target="order-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Recommendation to Restaurant -->
+        <mxCell id="rec-rest-rel" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="main" source="recommendation-module" target="restaurant-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Profile to Order -->
+        <mxCell id="profile-order-rel" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="main" source="profile-module" target="order-module">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

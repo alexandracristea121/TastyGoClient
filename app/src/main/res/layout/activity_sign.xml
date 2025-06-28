@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.examples.licenta_food_ordering.presentation.activity.SignUpActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="308dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comanda Mancarea Preferata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Inregistreaza-te aici"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="43dp"
+        android:drawableLeft="@drawable/user_plus"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Nume"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/edittextshape"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="43dp"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="43dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="22dp"
+        android:text="Sau"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Inregistreaza-te cu"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/googleButton"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/whitebutton"
+        android:drawableLeft="@drawable/google"
+        android:text="Google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createAccountButton"
+        android:layout_width="157dp"
+        android:layout_height="57dp"
+        android:background="@drawable/whitebutton"
+        android:text="Creeaza Cont"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/googleButton" />
+
+    <TextView
+        android:id="@+id/alreadyhavebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="Ai deja cont?"
+        app:layout_constraintEnd_toEndOf="@+id/createAccountButton"
+        app:layout_constraintStart_toStartOf="@+id/createAccountButton"
+        app:layout_constraintTop_toBottomOf="@+id/createAccountButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

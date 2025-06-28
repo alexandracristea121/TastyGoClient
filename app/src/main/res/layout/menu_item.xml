@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="0dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="119dp"
+        tools:layout_conversion_absoluteWidth="411dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_conversion_absoluteHeight="119dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ImageView
+                android:id="@+id/menuImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="64dp"
+                tools:layout_conversion_absoluteWidth="64dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/menuFoodName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Food Name"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toBottomOf="@+id/menuImage"
+                app:layout_constraintStart_toEndOf="@+id/menuImage"
+                app:layout_constraintTop_toTopOf="@+id/menuImage"
+                app:layout_constraintEnd_toStartOf="@+id/menuAddToCart"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="72dp" />
+
+            <TextView
+                android:id="@+id/menuAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/addtocartshape"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Adauga"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/menuPrice"
+                app:layout_constraintHorizontal_bias="0.76"
+                app:layout_constraintStart_toStartOf="@+id/menuPrice"
+                app:layout_constraintTop_toBottomOf="@+id/menuPrice"
+                app:layout_constraintVertical_bias="0.652"
+                tools:layout_conversion_absoluteHeight="20dp"
+                tools:layout_conversion_absoluteWidth="80dp" />
+
+            <TextView
+                android:id="@+id/menuPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="5 RON"
+                android:textColor="@color/textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.731"
+                app:layout_constraintStart_toEndOf="@+id/menuFoodName"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="16dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-03-19T12:00:00.000Z" agent="Mozilla/5.0" version="21.1.2" type="device">
+  <diagram id="tastygo-architecture" name="TastyGo Architecture">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Main Container -->
+        <mxCell id="main" value="TastyGo Food Ordering App" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- UI Layer -->
+        <mxCell id="ui-layer" value="User Interface Layer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="40" y="40" width="1000" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Activities -->
+        <mxCell id="activities" value="Activities" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="ui-layer">
+          <mxGeometry x="40" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="activity-list" value="• MainActivity&#xa;  - Bottom Navigation&#xa;  - Fragment Management&#xa;&#xa;• LoginActivity&#xa;  - Firebase Auth&#xa;  - Google Sign-In&#xa;&#xa;• SignUpActivity&#xa;  - User Registration&#xa;  - Data Validation&#xa;&#xa;• RestaurantDetailsActivity&#xa;  - Menu Display&#xa;  - Category Filtering&#xa;&#xa;• PaymentActivity&#xa;  - Stripe Integration&#xa;  - Order Processing&#xa;&#xa;• ChatbotActivity&#xa;  - AI Chat Interface&#xa;  - Voice Recognition&#xa;&#xa;• DetailsActivity&#xa;  - Food Item Details&#xa;  - Cart Integration&#xa;&#xa;• LocationSelectionActivity&#xa;  - Map Integration&#xa;  - Address Selection&#xa;&#xa;• RecentOrdersActivity&#xa;  - Order History&#xa;  - Reorder Functionality&#xa;&#xa;• SplashScreenActivity&#xa;  - App Initialization&#xa;  - Loading Screen&#xa;&#xa;• LaunchActivity&#xa;  - App Entry Point&#xa;  - Navigation Setup" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="activities">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Fragments -->
+        <mxCell id="fragments" value="Fragments" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="ui-layer">
+          <mxGeometry x="360" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fragment-list" value="• HomeFragment&#xa;  - Restaurant List&#xa;  - Location Services&#xa;&#xa;• CartFragment&#xa;  - Cart Management&#xa;  - Order Processing&#xa;&#xa;• ProfileFragment&#xa;  - User Profile&#xa;  - Settings Management&#xa;&#xa;• OrderHistoryFragment&#xa;  - Order Tracking&#xa;  - Reorder Options&#xa;&#xa;• NotificationsFragment&#xa;  - Push Notifications&#xa;  - Order Updates&#xa;&#xa;• FoodSearchFragment&#xa;  - Restaurant Search&#xa;  - Map Integration" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="fragments">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Bottom Sheets -->
+        <mxCell id="bottom-sheets" value="Bottom Sheets" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="ui-layer">
+          <mxGeometry x="680" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="bottom-sheet-list" value="• OrderSuccessBottomSheet&#xa;  - Order Confirmation&#xa;  - Delivery Tracking&#xa;&#xa;• NotificationsBottomSheet&#xa;  - Notification Display&#xa;  - Action Handling&#xa;&#xa;• MenuBottomSheetFragment&#xa;  - Menu Display&#xa;  - Category Navigation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bottom-sheets">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Business Logic Layer -->
+        <mxCell id="business-layer" value="Business Logic Layer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="main">
+          <mxGeometry x="40" y="260" width="1000" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Services -->
+        <mxCell id="services" value="Services" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="business-layer">
+          <mxGeometry x="40" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="service-list" value="• FirebaseCourierService&#xa;  - Courier Location Tracking&#xa;  - Real-time Updates&#xa;&#xa;• CourierTrackingService&#xa;  - Location Management&#xa;  - Route Optimization&#xa;&#xa;• RouteManager&#xa;  - Route Calculation&#xa;  - Traffic Analysis" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="services">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Utilities -->
+        <mxCell id="utilities" value="Utilities" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="business-layer">
+          <mxGeometry x="360" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="utility-list" value="• DistanceCalculationUtility&#xa;  - Distance Matrix API&#xa;  - Route Optimization&#xa;&#xa;• DeliveryUtils&#xa;  - Delivery Time Estimation&#xa;  - Cost Calculation&#xa;&#xa;• ImageUtils&#xa;  - Image Loading&#xa;  - Caching&#xa;&#xa;• SharedPrefsHelper&#xa;  - Local Storage&#xa;  - User Preferences&#xa;&#xa;• GeminiApiHelper&#xa;  - AI Chat Integration&#xa;  - Natural Language Processing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="utilities">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Network -->
+        <mxCell id="network" value="Network" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="business-layer">
+          <mxGeometry x="680" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="network-list" value="• RetrofitClient&#xa;  - API Communication&#xa;  - Request Handling&#xa;&#xa;• ApiService&#xa;  - Endpoint Definitions&#xa;  - Response Models" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="network">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Data Layer -->
+        <mxCell id="data-layer" value="Data Layer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="main">
+          <mxGeometry x="40" y="480" width="1000" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Firebase Services -->
+        <mxCell id="firebase" value="Firebase Services" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="data-layer">
+          <mxGeometry x="40" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="firebase-list" value="• Authentication&#xa;  - User Management&#xa;  - Security Rules&#xa;&#xa;• Realtime Database&#xa;  - Data Synchronization&#xa;  - Real-time Updates&#xa;&#xa;• Storage&#xa;  - Image Storage&#xa;  - File Management" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="firebase">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Models -->
+        <mxCell id="models" value="Models" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="data-layer">
+          <mxGeometry x="360" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="model-list" value="• Restaurant&#xa;  - Location Data&#xa;  - Menu Information&#xa;&#xa;• MenuItem&#xa;  - Food Details&#xa;  - Pricing&#xa;&#xa;• OrderDetails&#xa;  - Order Status&#xa;  - Delivery Info&#xa;&#xa;• UserModel&#xa;  - User Profile&#xa;  - Preferences&#xa;&#xa;• CartItem&#xa;  - Item Details&#xa;  - Quantity&#xa;&#xa;• Message&#xa;  - Chat History&#xa;  - User Interaction&#xa;&#xa;• NotificationModel&#xa;  - Push Notifications&#xa;  - Status Updates&#xa;&#xa;• SuggestedFood&#xa;  - Recommendations&#xa;  - User Preferences" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="models">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Adapters -->
+        <mxCell id="adapters" value="Adapters" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="data-layer">
+          <mxGeometry x="680" y="40" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="adapter-list" value="• MenuItemsAdapter&#xa;  - Menu Display&#xa;  - Item Selection&#xa;&#xa;• CartAdapter&#xa;  - Cart Management&#xa;  - Quantity Control&#xa;&#xa;• ChatAdapter&#xa;  - Message Display&#xa;  - User Interaction&#xa;&#xa;• PopularItemsAdapter&#xa;  - Popular Items&#xa;  - Quick Access&#xa;&#xa;• SuggestedFoodAdapter&#xa;  - Recommendations&#xa;  - User Preferences&#xa;&#xa;• NotificationAdapter&#xa;  - Notification Display&#xa;  - Action Handling&#xa;&#xa;• BuyItemsAgainAdapter&#xa;  - Order History&#xa;  - Reorder Options" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="adapters">
+          <mxGeometry y="30" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="rel1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="main" source="ui-layer" target="business-layer">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rel2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="main" source="business-layer" target="data-layer">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="500" as="sourcePoint"/>
+            <mxPoint x="590" y="450" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

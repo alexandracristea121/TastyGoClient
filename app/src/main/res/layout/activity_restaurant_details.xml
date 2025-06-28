@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.examples.licenta_food_ordering.presentation.activity.RestaurantDetailsActivity">
+
+    <!-- Top Bar with Restaurant Image -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_collapseMode="pin">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:padding="12dp"
+                android:src="@drawable/arrow_left" />
+
+            <TextView
+                android:id="@+id/restaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Restaurant Name" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/restaurantImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="Restaurant image"
+            android:scaleType="centerCrop"
+            app:layout_collapseMode="parallax"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Restaurant Info Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/infoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/restaurantAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    tools:text="Adresa: 123 Main St, City" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Category Filter -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <Spinner
+                    android:id="@+id/categoryFilterSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:popupBackground="@color/white"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:id="@+id/dropdownIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"
+                    android:contentDescription="Dropdown Icon"
+                    android:focusable="true"
+                    android:src="@drawable/ic_dropdown" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu Items List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menuRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/menu_item" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

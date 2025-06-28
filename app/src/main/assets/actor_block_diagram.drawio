@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-03-19T12:00:00.000Z" agent="Mozilla/5.0" version="21.1.2" type="device">
+  <diagram id="tastygo-actors" name="TastyGo Actor Block Diagram">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Main Container -->
+        <mxCell id="main" value="TastyGo Food Ordering System" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- Actors -->
+        <mxCell id="actors" value="Actors" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="main">
+          <mxGeometry x="40" y="40" width="1000" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Customer Actor -->
+        <mxCell id="customer" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="actors">
+          <mxGeometry x="100" y="30" width="30" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="customer-label" value="Customer&#xa;(Food Ordering User)" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="actors">
+          <mxGeometry x="140" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Restaurant Owner Actor -->
+        <mxCell id="restaurant-owner" value="Restaurant Owner" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="actors">
+          <mxGeometry x="400" y="30" width="30" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="restaurant-owner-label" value="Restaurant Owner&#xa;(Menu Management)" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="actors">
+          <mxGeometry x="440" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Courier Actor -->
+        <mxCell id="courier" value="Courier" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="actors">
+          <mxGeometry x="700" y="30" width="30" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="courier-label" value="Courier&#xa;(Delivery Service)" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="actors">
+          <mxGeometry x="740" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- System Modules -->
+        <mxCell id="modules" value="System Modules" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="main">
+          <mxGeometry x="40" y="200" width="1000" height="480" as="geometry"/>
+        </mxCell>
+
+        <!-- Customer Modules -->
+        <mxCell id="customer-modules" value="Customer Modules" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="modules">
+          <mxGeometry x="40" y="40" width="300" height="400" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="customer-module-list" value="• Authentication Module&#xa;  - Login/Registration&#xa;  - Profile Management&#xa;&#xa;• Restaurant Module&#xa;  - Browse Restaurants&#xa;  - View Menus&#xa;&#xa;• Order Module&#xa;  - Cart Management&#xa;  - Payment Processing&#xa;&#xa;• Delivery Module&#xa;  - Location Selection&#xa;  - Order Tracking&#xa;&#xa;• Chat Module&#xa;  - AI Assistant&#xa;  - Support Chat&#xa;&#xa;• Notification Module&#xa;  - Order Updates&#xa;  - Promotions&#xa;&#xa;• Recommendation Module&#xa;  - Food Suggestions&#xa;  - Popular Items" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="customer-modules">
+          <mxGeometry y="30" width="300" height="370" as="geometry"/>
+        </mxCell>
+
+        <!-- Restaurant Owner Modules -->
+        <mxCell id="restaurant-modules" value="Restaurant Owner Modules" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="modules">
+          <mxGeometry x="380" y="40" width="300" height="400" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="restaurant-module-list" value="• Restaurant Management&#xa;  - Menu Updates&#xa;  - Price Management&#xa;&#xa;• Order Management&#xa;  - Order Processing&#xa;  - Status Updates&#xa;&#xa;• Analytics Module&#xa;  - Sales Reports&#xa;  - Customer Insights&#xa;&#xa;• Notification Module&#xa;  - Order Alerts&#xa;  - System Updates&#xa;&#xa;• Profile Module&#xa;  - Restaurant Profile&#xa;  - Settings Management" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="restaurant-modules">
+          <mxGeometry y="30" width="300" height="370" as="geometry"/>
+        </mxCell>
+
+        <!-- Courier Modules -->
+        <mxCell id="courier-modules" value="Courier Modules" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="modules">
+          <mxGeometry x="720" y="40" width="300" height="400" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="courier-module-list" value="• Authentication Module&#xa;  - Courier Login&#xa;  - Profile Management&#xa;&#xa;• Delivery Module&#xa;  - Order Assignment&#xa;  - Route Navigation&#xa;&#xa;• Tracking Module&#xa;  - Location Updates&#xa;  - Status Management&#xa;&#xa;• Notification Module&#xa;  - Order Alerts&#xa;  - System Updates&#xa;&#xa;• Chat Module&#xa;  - Customer Support&#xa;  - Restaurant Communication" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="courier-modules">
+          <mxGeometry y="30" width="300" height="370" as="geometry"/>
+        </mxCell>
+
+        <!-- Actor to Module Relationships -->
+        <!-- Customer Relationships -->
+        <mxCell id="customer-rel1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="main" source="customer" target="customer-modules">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Restaurant Owner Relationships -->
+        <mxCell id="restaurant-rel1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="main" source="restaurant-owner" target="restaurant-modules">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Courier Relationships -->
+        <mxCell id="courier-rel1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="main" source="courier" target="courier-modules">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Cross-Module Relationships -->
+        <mxCell id="cross-rel1" value="Order Processing" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="main" source="customer-modules" target="restaurant-modules">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="cross-rel2" value="Delivery Assignment" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="main" source="restaurant-modules" target="courier-modules">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="cross-rel3" value="Order Tracking" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="main" source="courier-modules" target="customer-modules">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint"/>
+            <mxPoint x="590" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
